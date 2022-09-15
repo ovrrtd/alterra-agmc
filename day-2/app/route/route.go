@@ -1,7 +1,7 @@
 package route
 
 import (
-	"day-two/controller"
+	"agmc/controller"
 
 	"github.com/labstack/echo/v4"
 )

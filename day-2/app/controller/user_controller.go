@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"day-two/lib/database"
-	"day-two/model"
-	"day-two/util"
+	"agmc/lib/database"
+	"agmc/model"
+	"agmc/util"
 	"net/http"
 	"strconv"
 	"time"

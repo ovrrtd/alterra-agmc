@@ -1,8 +1,8 @@
 package main
 
 import (
-	"day-two/config"
-	"day-two/route"
+	"agmc/config"
+	"agmc/route"
 )
 
 func main() {

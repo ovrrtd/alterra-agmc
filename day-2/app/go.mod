@@ -1,4 +1,4 @@
-module day-two
+module agmc
 
 go 1.19
 

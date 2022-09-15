@@ -1,8 +1,8 @@
 package static
 
 import (
+	"agmc/model"
 	"context"
-	"day-two/model"
 	"errors"
 	"net/http"
 )

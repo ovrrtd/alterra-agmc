@@ -1,7 +1,7 @@
 package config
 
 import (
-	"day-two/model"
+	"agmc/model"
 	"fmt"
 
 	"gorm.io/driver/mysql"

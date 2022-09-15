@@ -1,9 +1,9 @@
 package database
 
 import (
+	"agmc/config"
+	"agmc/model"
 	"context"
-	"day-two/config"
-	"day-two/model"
 	"errors"
 	"net/http"
 

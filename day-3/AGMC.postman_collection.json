@@ -134,7 +134,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjM1MjI4NzZ9.JToVfVKp3EJdNkGCTmKc1CRYnVGwMcVlKu8eXJvpq04",
+										"value": "",
 										"type": "text"
 									}
 								],
@@ -279,7 +279,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjM1MjI4NzZ9.JToVfVKp3EJdNkGCTmKc1CRYnVGwMcVlKu8eXJvpq04",
+										"value": "",
 										"type": "text"
 									}
 								],
@@ -464,7 +464,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjM1MjI4NzZ9.JToVfVKp3EJdNkGCTmKc1CRYnVGwMcVlKu8eXJvpq04",
+								"value": "",
 								"type": "text"
 							}
 						],
@@ -551,7 +551,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjM1MjI0ODJ9.QUTUzVlUkJvEJvBZsTzqY5GMTV3wIvUsBQ-LeWAdldY",
+										"value": "",
 										"type": "text"
 									}
 								],
@@ -669,7 +669,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NjM1NTgxMDN9.gucK9iFr5P2oelgtkPtgRNvZbAhQZ_9K3kecNFbHDKA",
+										"value": "",
 										"type": "text"
 									}
 								],
@@ -814,7 +814,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjM1MjI0ODJ9.QUTUzVlUkJvEJvBZsTzqY5GMTV3wIvUsBQ-LeWAdldY",
+										"value": "",
 										"type": "text"
 									}
 								],
@@ -940,7 +940,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjM1MjI0ODJ9.QUTUzVlUkJvEJvBZsTzqY5GMTV3wIvUsBQ-LeWAdldY",
+								"value": "",
 								"type": "text"
 							}
 						],

@@ -77,7 +77,7 @@ func (s *service) GetUsers(ctx context.Context) ([]dto.User, int, error) {
 }
 
 func (s *service) GetUserByID(ctx context.Context, ID int64) (*dto.User, int, error) {
-	user, code, err := s.GetUserByID(ctx, ID)
+	user, code, err := s.UserRepository.GetUserByID(ctx, ID)
 	if err != nil {
 		return nil, code, err
 	}

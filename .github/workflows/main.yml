@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: dockerize
     steps:
-      - name: Checkout the files
+      - name: git pull n checkout
         uses: actions/checkout@v2
       
       - name: deploy to aws
@@ -57,7 +57,7 @@ jobs:
           key: ${{ secrets.AWS_PRIVATE_KEY }}
           script: |
             docker pull ovrrtd/agmc:latest &&
-            docker container stop agmc-api || true &&
-            docker container rm agmc-api || true &&
-            docker container create --name agmc-api --network host ovrrtd/agmc:latest &&
-            docker container start agmc-api
+            docker stop agmc-api || true &&
+            docker rm agmc-api || true &&
+            docker run -d --network host --name agmc-api agmc:latest ./main -migrate=migrate &&
+            docker run -d --network host --name agmc-api agmc:latest ./main &&

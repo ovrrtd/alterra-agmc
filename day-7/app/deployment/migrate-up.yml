@@ -1,8 +1,0 @@
-version: "3.8"
-
-services:
-  -migrate-up:
-    container_name: agmc-migrate-up
-    image: ovrrtd/agmc:latest
-    command: ./main -migrate=migrate
-    network_mode: host

@@ -1,8 +1,0 @@
-version: "3.8"
-
-services:
-  agmc-api:
-    container_name: agmc-api
-    image: ovrrtd/agmc:latest
-    command: ./main
-    network_mode: host

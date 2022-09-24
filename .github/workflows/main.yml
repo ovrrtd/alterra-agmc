@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
         name: git pull n checkout
 
-      - name: Create env file
+      - name: create env file
         uses: SpicyPizza/create-envfile@v1.3
         with:
           envkey_APP_PORT: ${{ secrets.APP_PORT }}
@@ -29,13 +29,13 @@ jobs:
           file_name: .env
           fail_on_empty: true
 
-      - name: Login to Docker Hub
+      - name: login to docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build & push Docker image
+      - name: build & push Docker image
         run: |
           docker compose -f deployment/build.yml up
           docker push ovrrtd/agmc:latest
@@ -50,14 +50,16 @@ jobs:
         uses: actions/checkout@v2
       
       - name: deploy to aws
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.AWS_HOST }}
-          username: ${{ secrets.AWS_USERNAME }}
-          key: ${{ secrets.AWS_PRIVATE_KEY }}
-          script: |
+        env:
+          AWS_HOST: ${{ secrets.AWS_HOST }}
+          AWS_USERNAME: ${{ secrets.AWS_USERNAME }}
+          AWS_PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY }}
+        eun: |
+          echo "$AWS_PRIVATE_KEY" > private_key && chmod 400 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${AWS_USERNAME}@${AWS_HOST} '
             docker pull ovrrtd/agmc:latest &&
             docker stop agmc-api || true &&
             docker rm agmc-api || true &&
             docker run -d --network host --name agmc-api agmc:latest ./main -migrate=migrate &&
             docker run -d --network host --name agmc-api agmc:latest ./main &&
+          '

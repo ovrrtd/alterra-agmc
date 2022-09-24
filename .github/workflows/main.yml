@@ -54,7 +54,7 @@ jobs:
           AWS_HOST: ${{ secrets.AWS_HOST }}
           AWS_USERNAME: ${{ secrets.AWS_USERNAME }}
           AWS_PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY }}
-        eun: |
+        run: |
           echo "$AWS_PRIVATE_KEY" > private_key && chmod 400 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${AWS_USERNAME}@${AWS_HOST} '
             docker pull ovrrtd/agmc:latest &&
